@@ -9,17 +9,12 @@ Help Fancy Pants get his new Limited Edition Blue Pants by climbing platforms :D
 
 ## Cloning
 ```bash
-$ git clone https://github.com/7divs7/Fancy.git
-```
-
-## Dependencies
-```bash
-$ pip3 install -r requirements.txt
+$ git clone https://github.com/7divs7/Fancy-GetThePants.git
 ```
 
 ## Instructions
 ```bash
-$ python3 crash_main.py
+$ open PlayGame.html
 ```
 
 ## Output
