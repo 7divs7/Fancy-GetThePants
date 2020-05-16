@@ -56,23 +56,18 @@ class Game
             draw_base();
         }
 
-        //this.platforms.forEach((object) => object.draw(ctx));
             
         this.platforms.forEach((object, index) => {
             if(this.player.count == 15 && index == 2) 
             {
                 object.draw_pants(ctx);
                 object.color = '#00f';
-                //this.shit = true;
-                //platforms = platforms.filter(object1 => object.shit);
             }
             else{
                 object.draw(ctx);
-                //this.shit = true;
             }
         })
-        
-        //this.platform.draw(ctx);
+                
         this.player.draw(ctx);
     }
 }
@@ -82,7 +77,7 @@ class InputHandler
     constructor(player)
     {
         document.addEventListener("keydown", event => {
-            //alert(event.keyCode);
+            
             switch(event.keyCode)
             {
                 case 37: player.move_left();
@@ -95,7 +90,7 @@ class InputHandler
         });
         
         document.addEventListener("keyup", event => {
-            //alert(event.keyCode);
+            
             switch(event.keyCode)
             {
                 case 37: if(player.x_vel<0) player.stop();
@@ -131,8 +126,6 @@ class Player
         this.jumping = false;
         
         this.position = {
-            //x: display_width/2 - this.width/2,
-            //y: display_height - this.height-10
             x: 30,
             y: 0
         };
@@ -143,8 +136,6 @@ class Player
     
     draw(ctx)
     {
-        //ctx.fillStyle = '#f00';
-        //ctx.fillRect(this.position.x, this.position.y, this.width, this.height);
         ctx.drawImage(this.image, this.position.x, this.position.y, this.width, this.height);
     }
 
@@ -162,22 +153,13 @@ class Player
 
     stop()
     {
-        this.x_vel = 0;
-        //this.x_vel -= this.x_vel*0.2; //friction
-    
+        this.x_vel = 0;    
     }
 
     jump()
     {
         this.t = true;
-        /*
-        if(this.jumping == false)
-        {   
-            //console.log("geygd");
-            this.y_vel -=40;
-            this.jumping = true;
-        }
-        */
+        
     }
     dont_jump()
     {
@@ -188,12 +170,10 @@ class Player
     {
         if(this.t && this.jumping == false)
         {
-            //console.log("geygd");
+            
             this.y_vel -=35;
             this.jumping = true;
-        }
-
-        //this.jumping = true;
+        }        
 
         this.y_vel += 1.5; //gravity
 
@@ -257,17 +237,6 @@ class Platform
         this.display_height = display_height;
         this.display_width = display_width;
     }
-    
-    moveX()
-    {
-        
-
-        this.ox = this.x;
-        this.oy = this.y;
-        //this.x = this.x + Math.cos(this.rotation);
-        this.vx = this.x + Math.cos(this.rotation) - this.x;
-        this.x += this.vx;
-    }
 
     moveY()
     {
@@ -283,18 +252,7 @@ class Platform
         //this.y = this.y % display_height;
     }
 
-    moveXY()
-    {
-        this.rotation += 0.01;
-
-        this.ox = this.x;
-        this.vx = this.x + Math.cos(this.rotation) - this.x;
-        this.oy = this.y;
-        this.vy = this.y + Math.cos(this.rotation) - this.y;
-        this.x += this.vx;
-        this.y += this.vy;
-    }
-
+    
     update(deltaTime)
     {
         this.moveY();
@@ -302,8 +260,6 @@ class Platform
     
     draw(ctx)
     {
-        //ctx.fillStyle = this.color;
-        //ctx.fillRect(this.x, this.y, this.width, this.height);
         ctx.drawImage(this.image, this.x, this.y, this.width, this.height);
     }
     draw_pants(ctx)
@@ -316,7 +272,7 @@ class Platform
 
 function collision(player, platforms)
 {
-    //for(let i = platforms.length - 1; i > -1; --i)
+    
     for(let i = 0; i<platforms.length; i++)
     {
         let platform = platforms[i];
@@ -375,11 +331,10 @@ function gameLoop(timestamp)
     let deltaTime = timestamp - lastTime;
     lastTime = timestamp;
 
-    //ctx.clearRect(0,0,display_width,display_height);
+    
     ctx.drawImage(cloud_img,0,0, display_width,display_height); 
-    //ctx.clearRect(0,0,);
 
-    //BASE
+
     
 
 
