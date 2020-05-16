@@ -18,7 +18,7 @@ $ open PlayGame.html
 ```
 
 ## Output
-
+![Alt Text](https://github.com/7divs7/Fancy-GetThePants/blob/master/Fancy/fancy.gif)
 
 ## Author
 [![LinkedIn-profile](https://img.shields.io/badge/LinkedIn-Profile-teal.svg)](https://www.linkedin.com/in/divyani-panda-5a8345194/)
