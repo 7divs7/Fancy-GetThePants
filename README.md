@@ -7,6 +7,7 @@
 # Fancy-GetThePants
 Help Fancy Pants get his new Limited Edition Blue Pants by climbing platforms :D 
 
+
 ## Cloning
 ```bash
 $ git clone https://github.com/7divs7/Fancy-GetThePants.git
