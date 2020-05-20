@@ -8,6 +8,10 @@
 Help Fancy Pants get his new Limited Edition Blue Pants by climbing platforms :D 
 
 
+# [Play](https://7divs7.github.io/Fancy-GetThePants/Fancy/PlayGame.html)
+
+
+
 ## Cloning
 ```bash
 $ git clone https://github.com/7divs7/Fancy-GetThePants.git
